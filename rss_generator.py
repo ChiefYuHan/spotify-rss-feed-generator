@@ -36,6 +36,10 @@ if __name__ == "__main__":
 
         print(artist)
 
-        index_path = os.path.join(os.path.dirname(__file__), 'index.html')
+        output_dir = "dist"
+
+        os.makedirs(output_dir, exist_ok=True)
+
+        index_path = os.path.join(os.path.dirname(__file__), output_dir, 'index.html')
         with open(index_path, 'w') as f:
             f.write(html_content)
