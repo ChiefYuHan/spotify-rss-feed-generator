@@ -24,4 +24,18 @@ if __name__ == "__main__":
     urn = 'spotify:artist:3jOstUTkEu2JkjvRdBA5Gu'
 
     artist = client.spotify.artist(urn)
-    print(artist)
+
+    if artist:
+        template_path = os.path.join(os.path.dirname(__file__), 'subscribe.html')
+        with open(template_path) as f:
+            template = f.read()
+
+        html_content = template.format(
+            artist_name = artist['name']
+        )
+
+        print(artist)
+
+        index_path = os.path.join(os.path.dirname(__file__), 'index.html')
+        with open(index_path, 'w') as f:
+            f.write(html_content)
