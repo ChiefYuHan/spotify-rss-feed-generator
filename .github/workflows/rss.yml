@@ -47,3 +47,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           user_name: "ChiefYuHan"
+          user_email: "mail.yuhanmeyer@gmail.com"
