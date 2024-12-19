@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .env
 .ropeproject/
+.cache
+# Build output
+dist/
