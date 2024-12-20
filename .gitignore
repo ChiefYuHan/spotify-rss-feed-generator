@@ -1,8 +1,3 @@
-venv/
-__pycache__/
-*.pyc
+node_modules/
 .env
-.ropeproject/
-.cache
-# Build output
 dist/
